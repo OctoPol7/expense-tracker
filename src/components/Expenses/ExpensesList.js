@@ -1,9 +1,10 @@
 import ExpenseItem from "./ExpenseItem";
+import './ExpensesList.css';
 
 const ExpensesList = props => {
-    let showExpenses = <p style={{ color: "white", textAlign: "center" }}>No Expenses Found</p>;
+    // let showExpenses = <p>No Expenses Found</p>;
 
-  if (props.items.length > 0) {
+  if (props.items.length === 0) {
     return <h2 className="expenes-list__fallback">Found no expenses.</h2>
   }
   return (
